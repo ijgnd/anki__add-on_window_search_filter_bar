@@ -30,7 +30,6 @@ AddonsDialog.filterAddons = filterAddons
 def redrawAddons(self) -> None:
     if hasattr(self, "filterbar"):
         terms = self.filterbar.text().lower().split()
-        print('terms are: {}'.format(terms))
     else:
         terms = []
     addonList = self.form.addonList
