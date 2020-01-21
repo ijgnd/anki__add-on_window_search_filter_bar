@@ -26,7 +26,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 from anki import version as anki_version
 from anki.utils import isMac
 
-old_anki = tuple(int(i) for i in anki_version.split(".")) < (2,1,17) 
+old_anki = tuple(int(i) for i in anki_version.split(".")) < (2,1,20) 
 
 
 """
