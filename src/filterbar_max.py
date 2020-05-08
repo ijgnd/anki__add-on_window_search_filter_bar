@@ -17,6 +17,8 @@ def after_init(self, addonsManager):
     self.filterbar = QLineEdit(self)
     self.filterbar.setPlaceholderText('type here to filter')
     self.form.verticalLayout_2.addWidget(self.filterbar)
+    focus_filter = QShortcut(QKeySequence("Ctrl+F"), self)
+    qconnect(focus_filter.activated, self.filterbar.setFocus)
     QtCore.QTimer.singleShot(0, self.filterbar.setFocus)
     self.filterbar.textChanged.connect(self.filterAddons) 
 AddonsDialog.__init__ = wrap(AddonsDialog.__init__, after_init)
